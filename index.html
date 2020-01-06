@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Plugin Integration Demo</title>
+</head>
+<body>
+    <h1>This is my webpage</h1>
+
+    <!--import this-->
+    <script src="https://storage.googleapis.com/id_ward_plugin_library/oidc-client.min.js"></script>
+    <script
+            id="idward-plugin-js"
+            src="https://storage.googleapis.com/id_ward_plugin_library/idw-plugin.min.js"
+            client_id=[Valid Client ID here]
+            redirect_uri="http://localhost:3000/callback.html"
+            post_logout_redirect_uri="http://localhost:3000/index.html"
+    ></script>
+    <!--------------->
+</body>
+</html>

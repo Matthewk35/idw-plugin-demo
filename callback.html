@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting you back...</title>
+</head>
+<body>
+    <script src="https://storage.googleapis.com/id_ward_plugin_library/oidc-client.min.js"></script>
+    <script>
+        new Oidc.UserManager({response_mode:"query"}).signinRedirectCallback().then(function(res) {
+            let referer;
+            if (typeof(Storage) !== "undefined") {
+                referer = window.localStorage.getItem('idw-signin-from');
+            } else {
+                referer = "index.html"
+            }
+            window.location = referer !== null ? referer : "index.html";
+        }).catch(function(e) {
+            console.error(e);
+        });
+    </script>
+</body>
+</html>
