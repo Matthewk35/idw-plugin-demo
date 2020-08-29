@@ -6,14 +6,45 @@
 <body>
     <h1>This is my webpage</h1>
 
-    <!--import this-->
-    <script src="https://storage.googleapis.com/id_ward_plugin_library/oidc-client.min.js"></script>
+    <!-- Google Analytics Example -->
     <script
-            id="idward-plugin-js"
-            src="https://storage.googleapis.com/id_ward_plugin_library/idw-plugin.min.js"
-            client_id=[Valid Client ID here]
-            redirect_uri="http://localhost:3000/callback.html"
-            post_logout_redirect_uri="http://localhost:3000/index.html"
+        type="text/plain"
+        src="https://www.googletagmanager.com/gtag/js?id=UA-96359771-3"
+
+        idw_level="measure_content_performance,remember_my_preferences"
+        idw_vendorId="google"
+        idw_vendorDisplayName="Google Analytics"
+        async
+    >
+    </script>
+    
+    <script
+        type="text/plain"
+        src="js/GA_Init.js"
+
+        idw_level="measure_content_performance,remember_my_preferences"
+        idw_vendorId="google"
+        idw_vendorDisplayName="Google Analytics"
+    ></script>
+    <!-- End of Google Analytics Example -->
+
+
+    <!-- Import the IDW Plugin-->
+    <script
+        id="idward-plugin-js"
+        src="https://storage.googleapis.com/id_ward_plugin_library/idw_plugin_global.min.js"
+
+        idw_clientid="IDW_CLIENTID_HERE"
+        idw_redirecturi="http://localhost:3000/callback.html"
+        idw_postlogout_redirecturi="http://localhost/index.html"
+
+        idwlang="en"
+
+        idw_color_primary="#11304d"
+        idw_color_primary_accent="#fff"
+
+        idw_color_secondary="#fff"
+        idw_color_secondary_accent="#11304d"
     ></script>
     <!--------------->
 </body>
